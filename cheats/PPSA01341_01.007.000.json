@@ -1,0 +1,214 @@
+{
+  "name": "Demon's Souls",
+  "id": "PPSA01341",
+  "version": "01.007.000",
+  "process": "eboot.bin",
+  "mods": [
+    {
+      "name": "God mode (no damage)",
+      "description": "You take no damage from anything that goes through the damage code (hits, spells, falls that hurt). Forces the game's own debug switch cp11_characters_playerNoDamage on. Instant-death events (falling into a pit, being grabbed off a ledge) still kill you.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "32D68D",
+          "on": "E649028038019090",
+          "off": "E649028038017514"
+        }
+      ]
+    },
+    {
+      "name": "No death (HP never drops below 1)",
+      "description": "You still take damage, but a hit that would kill you leaves you at 1 HP. Forces the game's own cp11_characters_playerNoDead switch (and the debug gate in front of it) on. Pits still kill.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "32D79E",
+          "on": "4531E4F600029090",
+          "off": "4531E4F60002742B"
+        },
+        {
+          "offset": "32D7B3",
+          "on": "E449028038019090",
+          "off": "E449028038017516"
+        }
+      ]
+    },
+    {
+      "name": "One-hit kill",
+      "description": "Every hit you land deals 999,999 damage (bosses included). Forces the game's own cp11_characters_playerExterminate switch on.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "32D58C",
+          "on": "E549028038019090",
+          "off": "E549028038017524"
+        }
+      ]
+    },
+    {
+      "name": "Infinite stamina",
+      "description": "Attacks, rolls, sprinting and other actions cost no stamina. Forces the game's own cp11_characters_playerNoStaminaConsume switch on. Blocking a hit still drains stamina.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "331A6C",
+          "on": "A449028038019090",
+          "off": "A449028038017510"
+        }
+      ]
+    },
+    {
+      "name": "Infinite MP",
+      "description": "Spells and miracles cost no MP. The spell-cost check keeps your MP as it is instead of subtracting the cost.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "316405",
+          "on": "8BB71C07000085F6",
+          "off": "8BB71C07000029C6"
+        }
+      ]
+    },
+    {
+      "name": "Infinite items and ammo (stacks refill to max when used)",
+      "description": "Whenever a stack in your inventory changes (you use, pick up, drop or move an item, or fire an arrow or bolt), it is set to its maximum (99, ammo 999). Same idea as hejran7's 'Max Items' cheat for 1.04.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "43DF67",
+          "on": "5601000089420890",
+          "off": "5601000044896A08"
+        }
+      ]
+    },
+    {
+      "name": "Infinite durability",
+      "description": "Weapons and armour never lose durability.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "444719",
+          "on": "4DFEF7D9FFCF9090",
+          "off": "4DFEF7D9FFCF893A"
+        },
+        {
+          "offset": "4446C6",
+          "on": "C841F7D8FFC99090",
+          "off": "C841F7D8FFC9890E"
+        }
+      ]
+    },
+    {
+      "name": "No soul loss on death",
+      "description": "You keep your souls when you die. Your bloodstain still appears, so picking it up adds those souls again.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "203592",
+          "on": "C190909090909090",
+          "off": "C141898D80000000"
+        }
+      ]
+    },
+    {
+      "name": "Souls x2",
+      "description": "Souls from kills are doubled (stacks with the Ring of Avarice and similar effects). Enable only one souls multiplier.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "3DDA40",
+          "on": "C5FA1005640CFA01",
+          "off": "C5FA1005DC06FA01"
+        }
+      ]
+    },
+    {
+      "name": "Souls x5",
+      "description": "Souls from kills x5. Enable only one souls multiplier.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "3DDA40",
+          "on": "C5FA10059010FA01",
+          "off": "C5FA1005DC06FA01"
+        }
+      ]
+    },
+    {
+      "name": "Souls x10",
+      "description": "Souls from kills x10. Enable only one souls multiplier.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "3DDA40",
+          "on": "C5FA1005E406FA01",
+          "off": "C5FA1005DC06FA01"
+        }
+      ]
+    },
+    {
+      "name": "Near-infinite item burden",
+      "description": "Max item burden becomes 10000 + 2 x Vitality instead of 70 + 2 x Vitality, so you can pick up everything. Item weights are unchanged.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "300F9A",
+          "on": "C5FA100D66E00702",
+          "off": "C5FA100D76374202"
+        },
+        {
+          "offset": "301049",
+          "on": "C5FA1005B7DF0702",
+          "off": "C5FA1005C7364202"
+        }
+      ]
+    },
+    {
+      "name": "No equipment weight limit",
+      "description": "Max equip burden becomes 10000 + Endurance instead of 29 + Endurance: you always fast-roll, whatever you wear. Equipment weights are unchanged.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "301109",
+          "on": "C5FA1005F7DE0702",
+          "off": "C5FA1005FF354202"
+        },
+        {
+          "offset": "3011B9",
+          "on": "C5FA100547DE0702",
+          "off": "C5FA10054F354202"
+        }
+      ]
+    },
+    {
+      "name": "Freeze enemies",
+      "description": "Every character except you stops updating: enemies, bosses and NPCs freeze in place. Forces the game's own cp11_characters_allNoUpdate switch on, minus the player. Turn it off to talk to NPCs or progress scripted events.",
+      "type": "checkbox",
+      "enabled": false,
+      "memory": [
+        {
+          "offset": "34C856",
+          "on": "3D34004802019090",
+          "off": "3D3400480201752D"
+        }
+      ]
+    }
+  ],
+  "credits": [
+    "labanmne",
+    "Claude (Anthropic)"
+  ]
+}
