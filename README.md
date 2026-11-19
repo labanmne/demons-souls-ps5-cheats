@@ -34,6 +34,9 @@ patch such as `75 14` could otherwise land somewhere else when it's used alone.
 
 ## Using it with KytyPS5
 
+Also on [Nexus Mods](https://www.nexusmods.com/demonssouls/mods/198), and discussed in
+[KytyPS5 discussion #359](https://github.com/chenxiao07/KytyPS5/discussions/359).
+
 1. Download [`cheats/PPSA01341_01.007.000.json`](cheats/PPSA01341_01.007.000.json).
 2. Save it as `_Patches\PPSA01341.json` in the KytyPS5 folder (the one with `KytyLauncher.exe`); create
    the `_Patches` folder if it isn't there.
